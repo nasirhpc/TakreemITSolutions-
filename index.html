@@ -387,6 +387,47 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 counters.forEach(counter => observer.observe(counter));
+// Formspree Success Message Handling
+const contactForm = document.querySelector('#contact form');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // পেজ রিফ্রেশ হওয়া বন্ধ করবে
+    
+    const formData = new FormData(contactForm);
+    const button = contactForm.querySelector('button');
+    const originalBtnText = button.innerHTML;
+    
+    // বাটন এনিমেশন
+    button.disabled = true;
+    button.innerHTML = '<span>পাঠানো হচ্ছে...</span> ⏳';
+
+    try {
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            // সফল হলে এই মেসেজ দেখাবে
+            contactForm.innerHTML = `
+                <div class="text-center py-10 animate__animated animate__fadeIn">
+                    <div class="text-6xl mb-4">✅</div>
+                    <h3 class="text-2xl font-bold text-[#064E3B] mb-2">ধন্যবাদ, Takreem IT Solutions কে মেসেজ দেওয়ার জন্য!</h3>
+                    <p class="text-gray-600">আপনার বার্তাটি সফলভাবে পৌঁছেছে। আমরা খুব শীঘ্রই আপনার সাথে যোগাযোগ করব।</p>
+                    <button onclick="location.reload()" class="mt-6 text-[#D4AF37] font-bold underline">আরেকটি মেসেজ পাঠাতে চান?</button>
+                </div>
+            `;
+        } else {
+            throw new Error();
+        }
+    } catch (error) {
+        // ভুল হলে এই মেসেজ দেখাবে
+        alert('দুঃখিত, মেসেজটি পাঠানো সম্ভব হয়নি। দয়া করে আবার চেষ্টা করুন বা সরাসরি হোয়াটসঅ্যাপ করুন।');
+        button.disabled = false;
+        button.innerHTML = originalBtnText;
+    }
+});
 
     </script>
     
