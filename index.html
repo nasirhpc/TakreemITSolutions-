@@ -13,6 +13,8 @@
         .green-gradient { background: linear-gradient(135deg, #064E3B 0%, #0A6B51 100%); }
         .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
         .service-card:hover { transform: translateY(-10px); border-color: #D4AF37; }
+        .client-badge { transition: all 0.3s ease; }
+        .client-badge:hover { background-color: #D4AF37; color: white; transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
@@ -28,6 +30,7 @@
                 <a href="#home" class="hover:text-[#D4AF37] transition-all">হোম</a>
                 <a href="#mission" class="hover:text-[#D4AF37] transition-all">মিশন</a>
                 <a href="#services" class="hover:text-[#D4AF37] transition-all">সেবা</a>
+                <a href="#clients" class="hover:text-[#D4AF37] transition-all">ক্লায়েন্ট</a>
                 <a href="#contact" class="green-gradient text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all">যোগাযোগ</a>
             </div>
         </div>
@@ -48,19 +51,15 @@
     <section id="mission" class="py-24">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="group p-12 bg-white rounded-3xl shadow-xl border-b-4 border-[#064E3B] hover:shadow-2xl transition-all" data-aos="fade-right">
-                    <div class="w-16 h-16 green-gradient rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                        <svg class="w-8 h-8 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
+                <div class="p-12 bg-white rounded-3xl shadow-xl border-b-4 border-[#064E3B]" data-aos="fade-right">
+                    <div class="w-16 h-16 green-gradient rounded-2xl flex items-center justify-center mb-6 shadow-lg text-[#D4AF37] text-3xl font-bold">M</div>
                     <h2 class="text-3xl font-bold text-[#064E3B] mb-6">আমাদের মিশন</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg">শিক্ষা প্রতিষ্ঠান এবং ছোট-বড় ব্যবসায়িক প্রতিষ্ঠানগুলোকে সাশ্রয়ী মূল্যে আধুনিক সফটওয়্যার ও ওয়েব প্রযুক্তির আওতায় আনা।</p>
+                    <p class="text-gray-600 leading-relaxed text-lg">শিক্ষা প্রতিষ্ঠান এবং ছোট-বড় ব্যবসায়িক প্রতিষ্ঠানগুলোকে সাশ্রয়ী মূল্যে আধুনিক সফটওয়্যার ও ওয়েব প্রযুক্তির আওতায় আনা। আমরা স্বচ্ছতা ও আস্থায় বিশ্বাসী।</p>
                 </div>
-                <div class="group p-12 bg-white rounded-3xl shadow-xl border-b-4 border-[#D4AF37] hover:shadow-2xl transition-all" data-aos="fade-left">
-                    <div class="w-16 h-16 gold-gradient rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                        <svg class="w-8 h-8 text-green-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                    </div>
+                <div class="p-12 bg-white rounded-3xl shadow-xl border-b-4 border-[#D4AF37]" data-aos="fade-left">
+                    <div class="w-16 h-16 gold-gradient rounded-2xl flex items-center justify-center mb-6 shadow-lg text-green-900 text-3xl font-bold">V</div>
                     <h2 class="text-3xl font-bold text-[#D4AF37] mb-6">আমাদের ভিশন</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg">প্রযুক্তি-নির্ভর জাতি গঠনে অগ্রণী ভূমিকা পালন করা এবং প্রতিটি ডিজিটাল সেবায় সর্বোচ্চ স্বচ্ছতা নিশ্চিত করা।</p>
+                    <p class="text-gray-600 leading-relaxed text-lg">একটি প্রযুক্তি-নির্ভর জাতি গঠনে অগ্রণী ভূমিকা পালন করা এবং প্রতিটি ডিজিটাল সেবায় সর্বোচ্চ কোয়ালিটি নিশ্চিত করা।</p>
                 </div>
             </div>
         </div>
@@ -70,76 +69,79 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
                 <h2 class="text-4xl md:text-5xl font-bold text-[#064E3B]" data-aos="fade-down">আমাদের বিশেষত্বসমূহ</h2>
-                <div class="w-24 h-1 gold-bg mx-auto mt-4"></div>
+                <div class="w-24 h-1 gold-bg mx-auto mt-4" style="background-color: #D4AF37;"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="service-card bg-white p-10 rounded-3xl shadow-md border-2 border-transparent transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div class="service-card bg-white p-10 rounded-3xl shadow-md border-2 border-transparent transition-all" data-aos="zoom-in">
                     <div class="text-5xl mb-6">🏫</div>
                     <h3 class="text-2xl font-bold text-[#064E3B] mb-4">শিক্ষা ম্যানেজমেন্ট</h3>
-                    <p class="text-gray-600 mb-6 text-sm">স্কুল-কলেজের জন্য অটোমেটেড রেজাল্ট, হাজিরা ও ফি কালেকশন সফটওয়্যার।</p>
-                    <ul class="text-left text-xs space-y-2 text-gray-500 font-semibold">
-                        <li>✔️ ডিজিটাল মার্কশিট</li>
-                        <li>✔️ অনলাইন পেমেন্ট</li>
-                    </ul>
+                    <p class="text-gray-600 mb-4 text-sm">রেজাল্ট, হাজিরা ও ফি কালেকশন সফটওয়্যার।</p>
                 </div>
-                <div class="service-card bg-white p-10 rounded-3xl shadow-md border-2 border-transparent transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
+                <div class="service-card bg-white p-10 rounded-3xl shadow-md border-2 border-transparent transition-all" data-aos="zoom-in" data-aos-delay="100">
                     <div class="text-5xl mb-6">💎</div>
                     <h3 class="text-2xl font-bold text-[#064E3B] mb-4">প্রিমিয়াম ওয়েবসাইট</h3>
-                    <p class="text-gray-600 mb-6 text-sm">ব্যক্তিগত পোর্টফোলিও থেকে শুরু করে কর্পোরেট ওয়েবসাইট তৈরি ও রক্ষণাবেক্ষণ।</p>
-                    <ul class="text-left text-xs space-y-2 text-gray-500 font-semibold">
-                        <li>✔️ সুপার ফাস্ট লোডিং</li>
-                        <li>✔️ এসইও ফ্রেন্ডলি</li>
-                    </ul>
+                    <p class="text-gray-600 mb-4 text-sm">পোর্টফোলিও থেকে কর্পোরেট সাইট ডিজাইন।</p>
                 </div>
-                <div class="service-card bg-white p-10 rounded-3xl shadow-md border-2 border-transparent transition-all duration-300" data-aos="zoom-in" data-aos-delay="300">
+                <div class="service-card bg-white p-10 rounded-3xl shadow-md border-2 border-transparent transition-all" data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-5xl mb-6">📈</div>
                     <h3 class="text-2xl font-bold text-[#064E3B] mb-4">মার্কেটিং সলিউশন</h3>
-                    <p class="text-gray-600 mb-6 text-sm">সঠিক এসইও (SEO) এবং সোশাল মিডিয়া স্ট্যাটেজির মাধ্যমে ব্র্যান্ড প্রোমোশন।</p>
-                    <ul class="text-left text-xs space-y-2 text-gray-500 font-semibold">
-                        <li>✔️ ফেসবুক ক্যাম্পেইন</li>
-                        <li>✔️ কন্টেন্ট রাইটিং</li>
-                    </ul>
+                    <p class="text-gray-600 mb-4 text-sm">এসইও এবং সোশাল মিডিয়া স্ট্যাটেজি।</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-[#064E3B] mb-12" data-aos="fade-down">আমাদের সম্মানিত ক্লায়েন্টসমূহ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 font-semibold text-gray-700">
+                <div class="client-badge p-6 border border-gray-100 rounded-2xl shadow-sm cursor-default">হামদর্দ পাবলিক কলেজ, ঢাকা</div>
+                <div class="client-badge p-6 border border-gray-100 rounded-2xl shadow-sm cursor-default">মিটুয়ানী বিসিএস আদর্শ উচ্চ বিদ্যালয়</div>
+                <div class="client-badge p-6 border border-gray-100 rounded-2xl shadow-sm cursor-default">মিটুয়ানী সরকারি প্রাথমিক বিদ্যালয়</div>
+                <div class="client-badge p-6 border border-gray-100 rounded-2xl shadow-sm cursor-default">সম্ভুদিয়া বহুমুখী উচ্চ বিদ্যালয়</div>
+                <div class="client-badge p-6 border border-gray-100 rounded-2xl shadow-sm cursor-default">খাষপুখুরিয়া বি এম উচ্চ বিদ্যালয়</div>
+                <div class="client-badge p-6 border border-gray-100 rounded-2xl shadow-sm cursor-default">পয়লা বহুমুখী উচ্চ বিদ্যালয়</div>
+                <div class="client-badge p-6 border border-gray-100 rounded-2xl shadow-sm cursor-default text-sm">রেহাইপুখুরিয়া শহীদ শাহজাহান কবির উচ্চ বিদ্যালয়</div>
+                <div class="client-badge p-6 border border-[#D4AF37] rounded-2xl shadow-sm text-[#064E3B]">এবং আরও অনেক...</div>
             </div>
         </div>
     </section>
 
     <section class="green-gradient py-24 text-center text-white">
         <div class="container mx-auto px-6" data-aos="fade-up">
-            <svg class="w-12 h-12 text-[#D4AF37] mx-auto mb-8 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.895 14.912 16 16.017 16H19.017V14H15.017C13.912 14 13.017 13.105 13.017 12V6C13.017 4.895 13.912 4 15.017 4H20.017C21.122 4 22.017 4.895 22.017 6V12C22.017 12.63 21.724 13.193 21.267 13.565L19.017 18H21.017V21H14.017ZM3.017 21V18C3.017 16.895 3.912 16 5.017 16H8.017V14H4.017C2.912 14 2.017 13.105 2.017 12V6C2.017 4.895 2.912 4 4.017 4H9.017C10.122 4 11.017 4.895 11.017 6V12C11.017 12.63 10.724 13.193 10.267 13.565L8.017 18H10.017V21H3.017Z"/></svg>
-            <p class="text-3xl italic mb-8 font-light">"একজন শিক্ষকের সততা এবং প্রযুক্তির আধুনিকতা নিয়ে আমরা কাজ করি।"</p>
-            <div class="gold-bg h-1 w-20 mx-auto mb-6"></div>
+            <p class="text-3xl italic mb-8 font-light leading-relaxed">"একজন শিক্ষকের সততা এবং প্রযুক্তির আধুনিকতা নিয়ে <br> আমরা প্রতিটি প্রজেক্ট সম্পন্ন করি।"</p>
+            <div class="h-1 w-20 mx-auto mb-6" style="background-color: #D4AF37;"></div>
             <p class="text-[#D4AF37] font-bold text-2xl tracking-wide">— হোজ্জা মো. নাসির উদ্দিন</p>
             <p class="text-blue-100 mt-2">ফাউন্ডার, Takreem IT Solutions</p>
         </div>
     </section>
 
-    <section id="contact" class="py-24">
+    <section id="contact" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="max-w-5xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
                 <div class="md:w-1/3 green-gradient p-12 text-white flex flex-col justify-center">
-                    <h3 class="text-3xl font-bold mb-6">কথা বলুন আজই</h3>
-                    <p class="text-blue-100 mb-8">আপনার যেকোনো প্রশ্ন বা প্রজেক্ট আইডিয়া আমাদের সাথে শেয়ার করুন।</p>
-                    <div class="space-y-4">
-                        <p class="flex items-center">📍 ঢাকা, বাংলাদেশ</p>
-                        <p class="flex items-center">📧 info@takreemits.com</p>
+                    <h3 class="text-3xl font-bold mb-6 text-[#D4AF37]">কথা বলুন আজই</h3>
+                    <p class="text-blue-100 mb-8 leading-relaxed">আপনার যেকোনো প্রশ্ন বা আইটি প্রজেক্ট সম্পর্কে পরামর্শের জন্য আমাদের মেসেজ দিন।</p>
+                    <div class="space-y-4 text-sm text-gray-200">
+                        <p>📍 ঢাকা, বাংলাদেশ</p>
+                        <p>📧 nuphydu@gmail.com</p>
                     </div>
                 </div>
                 <div class="md:w-2/3 p-12">
-                    <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <form action="https://formspree.io/f/your-id-here" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <label class="block text-xs font-bold text-gray-400 uppercase mb-2">আপনার নাম</label>
-                            <input type="text" class="w-full bg-gray-50 border-b-2 border-gray-200 focus:border-[#D4AF37] outline-none py-3 transition-all">
+                            <input type="text" name="name" required class="w-full bg-gray-50 border-b-2 border-gray-200 focus:border-[#D4AF37] outline-none py-3 transition-all">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-gray-400 uppercase mb-2">ইমেইল</label>
-                            <input type="email" class="w-full bg-gray-50 border-b-2 border-gray-200 focus:border-[#D4AF37] outline-none py-3 transition-all">
+                            <input type="email" name="email" required class="w-full bg-gray-50 border-b-2 border-gray-200 focus:border-[#D4AF37] outline-none py-3 transition-all">
                         </div>
                         <div class="md:col-span-2">
-                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">বার্তা</label>
-                            <textarea rows="3" class="w-full bg-gray-50 border-b-2 border-gray-200 focus:border-[#D4AF37] outline-none py-3 transition-all"></textarea>
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">আপনার বার্তা</label>
+                            <textarea name="message" rows="3" required class="w-full bg-gray-50 border-b-2 border-gray-200 focus:border-[#D4AF37] outline-none py-3 transition-all"></textarea>
                         </div>
-                        <button class="md:col-span-2 gold-gradient text-green-900 font-bold py-5 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all uppercase tracking-widest text-lg">মেসেজ পাঠান</button>
+                        <button type="submit" class="md:col-span-2 gold-gradient text-green-900 font-bold py-5 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all uppercase tracking-widest text-lg">মেসেজ পাঠান</button>
                     </form>
                 </div>
             </div>
@@ -148,23 +150,15 @@
 
     <footer class="bg-[#042F24] text-white py-16 text-center border-t-8 border-[#D4AF37]">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-[#D4AF37] mb-6 tracking-widest">TAKREEM IT SOLUTIONS</h2>
-            <div class="flex justify-center space-x-6 mb-10 text-gray-400">
-                <a href="#" class="hover:text-white transition">Facebook</a>
-                <a href="#" class="hover:text-white transition">LinkedIn</a>
-                <a href="#" class="hover:text-white transition">Twitter</a>
-            </div>
-            <p class="text-gray-500 text-sm italic">© 2026 Takreem IT. গড়া হয়েছে সততা ও শিক্ষার অনুপ্রেরণায়।</p>
+            <h2 class="text-3xl font-bold text-[#D4AF37] mb-6 tracking-widest uppercase">Takreem IT Solutions</h2>
+            <p class="text-gray-400 mb-6 text-sm">হামদর্দ পাবলিক কলেজ ক্যাম্পাস সংলগ্ন এলাকা থেকে পরিচালিত।</p>
+            <p class="text-gray-500 text-xs italic">© 2026 Takreem IT. গড়া হয়েছে সততা ও শিক্ষার অনুপ্রেরণায়।</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-in-out'
-        });
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
 </html>
